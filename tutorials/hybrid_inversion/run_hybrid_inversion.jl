@@ -1,8 +1,5 @@
 # ================================== using tools ==================================================
 # some of the things that will be using... Julia tools, SINDBAD tools, local codes...
-import Pkg
-Pkg.activate(".")
-Pkg.instantiate()
 using Revise
 using SindbadTutorials
 using Sindbad.MachineLearning
@@ -21,20 +18,17 @@ end
 # ================================== get data / set paths ========================================= 
 path_output         = "";
 
-#= this one takes a hugh amount of time, leave it here for reference
+# this one takes a hugh amount of time, leave it here for reference
 # ================================== setting up the experiment ====================================
 # experiment is all set up according to a (collection of) json file(s)
-path_experiment_json    = joinpath(@__DIR__,"..","experiments","settings_WROASTED_HB","experiment_hybrid.json");
-path_training_folds     = "";#joinpath(@__DIR__,"..","experiments","settings_WROASTED_HB","nfolds_sites_indices.jld2");
+path_experiment_json    = joinpath(@__DIR__,"..","setups","WROASTED_HB","experiment_hybrid.json");
+path_training_folds     = "";#joinpath(@__DIR__,"..","setups","WROASTED_HB","nfolds_sites_indices.jld2");
 
 replace_info = Dict(
-    "forcing.default_forcing.data_path" => path_input,
     "forcing.subset.site" => selected_site_indices,
-    "optimization.observations.default_observation.data_path" => path_observation,
     "optimization.optimization_cost_threaded" => false,
     "optimization.optimization_parameter_scaling" => nothing,
     "hybrid.ml_training.fold_path" => nothing,
-    "hybrid.covariates.path" => path_covariates,
 );
 
 # generate the info and other helpers
@@ -46,7 +40,7 @@ hybrid_helpers  = prepHybrid(forcing, observations, info, info.hybrid.ml_trainin
 
 # ================================== train the hybrid model =======================================
 trainML(hybrid_helpers, info.hybrid.ml_training.method)
-=#
+#
 
 # ================================== change setup to LUE ==========================================
 # same as before, but for a faster / simpler LUE model

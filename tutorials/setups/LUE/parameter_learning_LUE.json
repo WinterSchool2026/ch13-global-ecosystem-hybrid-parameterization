@@ -3,7 +3,7 @@
   "ml_model": {
     "method": "DenseNN",
     "options": {
-      "n_layers": 5,
+      "n_layers": 20,
       "n_neurons": 32,
       "k_σ": 3.0,
       "activation_out": "flux_sigmoid",
@@ -30,7 +30,7 @@
     "options": {
       "chunk_size": 2
     },
-    "package": "FiniteDiff"
+    "package": "ForwardDiff"
   },
   "ml_optimizer": {
     "method": "Adam",
@@ -46,7 +46,9 @@
   "save_checkpoint": true,
   "covariates": {
     "path": "https://s3.bgc-jena.mpg.de:9000/sindbad/CovariatesFLUXNET.zarr",
-    "variables": "all"
+    "options": {
+      "kind": "all"
+    }
   },
 
   "random_seed": 2739

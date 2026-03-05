@@ -1,9 +1,6 @@
 
 # ================================== using tools ==================================================
 # some of the things that will be using... Julia tools, SINDBAD tools, local codes...
-import Pkg
-Pkg.activate(".")
-Pkg.instantiate()
 using Revise
 using SindbadTutorials
 using SindbadTutorials.Sindbad

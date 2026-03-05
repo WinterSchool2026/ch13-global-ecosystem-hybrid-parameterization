@@ -1,4 +1,5 @@
 {
+  "ml_experiment_type": "fluxnet_parameter_learning_WROASTED",
   "ml_model": {
     "method": "DenseNN",
     "options": {
@@ -45,7 +46,9 @@
   "save_checkpoint": true,
   "covariates": {
     "path": "https://s3.bgc-jena.mpg.de:9000/sindbad/CovariatesFLUXNET.zarr",
-    "variables": "all"
+    "options": {
+      "kind": "all"
+    }
   },
 
   "random_seed": 2739
