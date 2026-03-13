@@ -104,7 +104,8 @@
       "diagnostics.root_water_efficiency": "d_soil",
       "diagnostics.transpiration_supply": null,
       "diagnostics.water_balance": null,
-      "diagnostics.WUE": null
+      "diagnostics.WUE": null,
+      "diagnostics.gpp_f_airT": null
     }
   },
   "model_spinup": {
