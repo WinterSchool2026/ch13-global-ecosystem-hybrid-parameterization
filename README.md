@@ -23,17 +23,24 @@ The main objectives of this challenge are to:
 
 ## Getting the repo
 
-The following command will install the tutorial files and SINDBAD itself. First of all, go to `colab` (or use `colab` extension if you are using VSCode), then go to `Tools` -> `Command Palette` -> `show terminal` to open a terminal in `colab`. Then, run the following command in the terminal to clone the repo:
+The following command will install the tutorial files and SINDBAD itself. First of all, go to `colab` (or use `colab` extension if you are using VSCode), then go to `Tools` -> `Command Palette` -> `show terminal` to open a terminal in `colab`. Then mount your Google Drive by:
+```bash
+from google.colab import drive
+drive.mount('/content/drive')
+```
+Then, run the following command in the terminal to clone the repo:
 
 ```bash
+cd /content/drive/MyDrive
 git clone https://github.com/WinterSchool2026/ch13-global-ecosystem-hybrid-parameterization.git
 ```
 
-or ```bash
+or 
+```bash
 git clone https://github.com/LandEcosystems/SindbadTutorials.jl
 ```
 
-Note the root directory of where the repo is, for convenience, we'll call it `repo_root` from now on.
+Note the root directory of where the repo is (```cd ch13-global-ecosystem-hybrid-parameterization```), for convenience, we'll call it `repo_root` from now on.
 
 The tutorial files are stored in the `tutorials` subdirectory, and organised by topic or summer school or other event. The current tutorials are:
 - hybrid_inversion
@@ -91,4 +98,4 @@ In VS code, set the `which_tutorial` as the active project by clicking on the `J
 
 # Tutorials
 
-The tutorials are located under `./tutorials/hybrid_inversion`. Follow the instructions in the `.jl` scripts or `.ipynb` notebooks.
+The tutorials are located under `./tutorials/hybrid_inversion_Task*`. Follow the instructions in the `.jl` scripts or `.ipynb` notebooks.
