@@ -36,7 +36,7 @@ Then, run the following command in the terminal to clone the repo:
 
 or 
 ```bash
-git clone https://github.com/LandEcosystems/SindbadTutorials.jl.git
+git clone https://github.com/AI4PEX/SindbadTutorials.jl.git
 ```
 
 Note the root directory of where the repo is (```cd SindbadTutorials.jl```), for convenience, we'll call it `repo_root` from now on.
